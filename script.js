@@ -17,7 +17,7 @@ let colculate = (arr_item_1 , arr_item_2 , prop_currentTip) =>{
         h1_total_amount.innerHTML = `$0`
     }else{
         console.log(+arr_item_1 , +arr_item_2 , prop_currentTip)
-        final_tip = Math.ceil(((arr_item_1 * prop_currentTip) / 100))
+        final_tip = Math.ceil(((arr_item_1 / 100) * prop_currentTip)/arr_item_2)
         total_amount = Math.ceil((arr_item_1 / arr_item_2) + final_tip)
         console.log(final_tip , total_amount)
         h1_tip_amount.innerHTML = `$${final_tip}`
